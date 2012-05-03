@@ -1,0 +1,105 @@
+#trigger {
+	color: white;
+}
+
+#ball {
+	width: 20px;
+	height: 20px;
+	background-image: -webkit-gradient(radial, 10 10, 0, 10 10, 10, from(white),
+		to(black));
+	position: absolute;
+	top: 374px; /*384 - 10*/
+	left: -10px;
+	opacity: 0;
+}
+
+img {
+	height: 768px;
+	width: 768px;
+	display: none;
+	-webkit-mask-box-image: -webkit-radial-gradient(white, transparent 50%);
+}
+
+img.selected {
+	display: inline;
+}
+
+body {
+	background-color: black;
+}
+
+#imageContainer {
+	opacity: 0;
+}
+
+#imageContainer.running {
+	-webkit-animation: image 3s linear 0 infinite;
+}
+
+#ball.running {
+	-webkit-animation: ball 3s linear 0 infinite;
+}
+
+@-webkit-keyframes image {
+10% {
+	opacity: 0;
+}
+40% {
+    opacity: 1;
+}
+70% {
+    opacity:1;
+}
+80% {
+    opacity:0;
+}}
+
+@-webkit-keyframes ball { 
+5% {
+	-webkit-transform: translate(38px, 0);
+	opacity: 1;
+}
+10% {
+    -webkit-transform: translate(76px,0);
+}
+14% {
+    -webkit-transform: translate(107px,20px);
+}
+18% {
+    -webkit-transform: translate(138px, -100px);
+}
+22% {
+    -webkit-transform: translate(169px, 100px);
+}
+26% {
+    -webkit-transform: translate(200px, -20px);
+}
+30% {
+    -webkit-transform: translate(230px, 0);
+}
+70% {
+    -webkit-transform: translate(538px, 0);
+}
+74% {
+    -webkit-transform: translate(568px, 20px);
+}
+78% {
+    -webkit-transform: translate(599px, -100px);
+}
+82% {
+    -webkit-transform: translate(630px, 100px);
+}
+86% {
+    -webkit-transform: translate(660px, -20px);
+}
+90% {
+    -webkit-transform: translate(691px, 0);
+}
+95% {
+    -webkit-transform: translate(730px, 0);
+    opacity: 1;
+}
+100% {
+    -webkit-transform: translate(768px, 0);
+    opacity: 0;
+}}
